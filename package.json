@@ -110,6 +110,7 @@
     "oracle": false,
     "strong-oracle": false,
     "sqlite3": false,
+    "sqlitecordova": true,
     "oracledb": false
   },
   "react-native": {

@@ -14,7 +14,8 @@ const aliases = {
   'mariasql' : 'maria',
   'pg' : 'postgres',
   'postgresql' : 'postgres',
-  'sqlite' : 'sqlite3'
+  'sqlite' : 'sqlite3',
+  'sqlitecordova' : 'sqlitecordova'
 };
 
 export default function Knex(config) {
@@ -67,5 +68,6 @@ Knex.raw = (sql, bindings) => {
 // Doing this ensures Browserify works. Still need to figure out
 // the best way to do some of this.
 if (process.browser) {
-  require('./dialects/websql/index.js')
+  require('./dialects/websql/index.js');
+  +  require('./dialects/sqlitecordova/index.js');
 }
